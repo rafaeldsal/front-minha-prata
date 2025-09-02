@@ -9,6 +9,7 @@ import { UserMenuComponent } from './core/header/user-menu/user-menu.component';
 import { CartButtonComponent } from './core/header/cart-button/cart-button.component';
 import { CartComponent } from './core/header/cart/cart.component';
 import { SearchComponent } from './features/home/search/search.component';
+import { BannerComponent } from './features/home/banner/banner.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { SearchComponent } from './features/home/search/search.component';
     UserMenuComponent,
     CartButtonComponent,
     CartComponent,
-    SearchComponent
+    SearchComponent,
+    BannerComponent
   ],
   imports: [
     BrowserModule,
