@@ -8,7 +8,7 @@ import { HeaderComponent } from './core/header/header.component';
 import { UserMenuComponent } from './core/header/user-menu/user-menu.component';
 import { CartButtonComponent } from './core/header/cart-button/cart-button.component';
 import { CartComponent } from './core/header/cart/cart.component';
-import { SearchComponent } from './core/search/search.component';
+import { SearchComponent } from './features/home/search/search.component';
 
 @NgModule({
   declarations: [
