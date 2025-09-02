@@ -1,0 +1,49 @@
+@import 'src/styles/variables';
+
+.user-menu-container {
+  position: relative;
+
+  button {
+    border: none;
+    background: transparent;
+    font-size: 1.3rem;
+    cursor: pointer;
+    color: $text-color;
+    transition: 0.3s;
+
+    &:hover {
+      color: $primary-color;
+      transform: scale();
+    }
+  }
+
+  .dropdown {
+    position: absolute;
+    top: 120%;
+    right: 0;
+    background: #fff;
+    border: 1px solid lighten($background-color, 10%);
+    border-radius: 8px;
+    list-style: none;
+    padding: 0.5rem 0;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    min-width: 140px;
+
+    li {
+      padding: 0.5rem 1rem;
+
+      a {
+        text-decoration: none;
+        color: $text-color;
+        display: block;
+        font-weight: 500;
+        transition: 0.3s;
+
+        &:hover {
+          background: $background-color;
+          color: $primary-color;
+        }
+      }
+    }
+  }
+}
