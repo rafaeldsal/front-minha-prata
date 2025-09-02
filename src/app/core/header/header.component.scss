@@ -1,0 +1,77 @@
+@import 'src/styles/variables';
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  .logo {
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: $text-color;
+
+    &:hover {
+      color: $primary-color;
+    }
+  }
+
+  nav {
+    display: flex;
+    gap: 1rem;
+
+    button {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: transparent;
+      border: none;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 15px;
+      color: $text-color;
+      transition: color 0.3s, transform 0.3s;
+
+      i {
+        font-size: 20px;
+      }
+
+      &:hover {
+        color: $primary-color;
+        transform: scale(1.05);
+      }
+
+      &.active {
+        color: $primary-color;
+        font-weight: 700;
+      }
+    }
+  }
+
+  .user-cart {
+    display: flex;
+    gap: 1rem;
+
+    button {
+      border: none;
+      background: transparent;
+      cursor: pointer;
+      padding: 0.4rem;
+      border-radius: 50%;
+      transition: 0.3s;
+      font-size: 1.3rem;
+      color: $text-color;
+
+      &:hover {
+        color: $primary-color;
+        transform: scale(1.1);
+      }
+    }
+  }
+}

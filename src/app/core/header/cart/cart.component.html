@@ -1,0 +1,31 @@
+<div class="cart-overlay" [class.open]="isOpen">
+  <div class="cart-container">
+    <!-- Header do carrinho -->
+    <div class="cart-header">
+      <span>Carrinho</span>
+      <button class="close-btn" (click)="close()">X</button>
+    </div>
+
+    <!-- Lista de produtos com scroll -->
+    <div class="cart-list">
+      <div class="cart-item" *ngFor="let item of items$ | async">
+        <img [src]="item.image" alt="Produto">
+        <div class="item-info">
+          <div>{{ item.name }}</div>
+          <div>{{ item.category }}</div>
+          <div>{{ item.price | currency:'BRL' }}</div>
+        </div>
+        <div class="item-qty">
+          <button (click)="decrement(item)">-</button>
+          <span>{{ item.quantity }}</span>
+          <button (click)="increment(item)">+</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="cart-footer">
+      <button>Finalizar Compra</button>
+    </div>
+  </div>
+</div>

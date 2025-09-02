@@ -1,0 +1,15 @@
+<header>
+  <div class="logo">MinhaPrata</div>
+
+  <nav>
+    <button *ngFor="let cat of categories" [class.active]="selectedCategory === cat.value"
+      (click)="filterProducts(cat.value)">
+      <i [class]="cat.icon"></i> {{ cat.label }}
+    </button>
+  </nav>
+
+  <div class="user-cart">
+    <app-user-menu></app-user-menu>
+    <app-cart-button [itemCount]="cartItemCount" (click)="onCartClick()"></app-cart-button>
+  </div>
+</header>

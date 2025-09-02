@@ -1,0 +1,11 @@
+<div class="user-menu-container">
+  <button (click)="toggleMenu()" class="user-menu-button">
+    <i class="fa-regular fa-user"></i>
+  </button>
+
+  <ul class="dropdown" *ngIf="isOpen">
+    <li><a href="#">Perfil</a></li>
+    <li><a href="#">Pedidos</a></li>
+    <li><a href="#" (click)="logout()">Sair</a></li>
+  </ul>
+</div>
